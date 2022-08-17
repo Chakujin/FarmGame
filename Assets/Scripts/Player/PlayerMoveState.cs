@@ -8,7 +8,6 @@ public class PlayerMoveState : MonoBehaviour
 
     //State Machine
     private PlayerMachine StateMachine;
-    private MonoBehaviour NPCMoveState;
 
     //Variables
     public float moveSpeed = 5f;

@@ -9,22 +9,28 @@ public class PlayerMachine : MonoBehaviour
 
     public MonoBehaviour PlayerInicialState;
     public MonoBehaviour PlayerMoveState;
+    public MonoBehaviour PlayerActionState;
 
     //Variables
     public Animator playerAnimator;
+
 
     // Start is called before the first frame update
     void Start()
     {
         //State Machine
-        //PlayerMoveState.enabled = false;
+        PlayerMoveState.enabled = false;
+        PlayerActionState.enabled = false;
         ChangeState(PlayerInicialState);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown("Fire1"))
+        {
+            ChangeState(PlayerActionState);
+        }
     }
 
     public void ChangeState(MonoBehaviour newState)
