@@ -64949,7 +64949,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 10
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -65077,7 +65077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016fc2f921aa50a4686897e85a45d1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 30775467d2cff55488bf675d56460c28, type: 2}
+  data: {fileID: 11400000, guid: 4b1615e53533d4743ad77019ceccf908, type: 2}
 --- !u!212 &2120463578
 SpriteRenderer:
   m_ObjectHideFlags: 0
