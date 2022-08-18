@@ -7,6 +7,9 @@ public class InventoryScript : MonoBehaviour
 {
     public static InventoryScript Instance;
 
+    public delegate void onInvenotryChanged();
+    public event onInvenotryChanged onInvenotryChangedEventCallback;
+
     private Dictionary<ItemData, InventoryItem> _itemDictionary;
     public List<InventoryItem> inventory;
 
@@ -24,6 +27,8 @@ public class InventoryScript : MonoBehaviour
         {
             Debug.Log("Add stack in item");
             value.AddStack();
+
+            onInvenotryChangedEventCallback.Invoke(); //UPDATE UI INVENTORY
         }
         else
         {
@@ -31,6 +36,7 @@ public class InventoryScript : MonoBehaviour
             InventoryItem newItem = new InventoryItem(itemData);
             inventory.Add(newItem);
             _itemDictionary.Add(itemData, newItem);
+            onInvenotryChangedEventCallback.Invoke(); //UPDATE UI INVENTORY
         }
     }
 
@@ -46,5 +52,7 @@ public class InventoryScript : MonoBehaviour
                 _itemDictionary.Remove(itemData);
             }
         }
+
+        onInvenotryChangedEventCallback.Invoke(); //UPDATE UI INVENTORY
     }
 }
