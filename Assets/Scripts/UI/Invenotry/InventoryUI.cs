@@ -5,6 +5,10 @@ using UnityEngine;
 public class InventoryUI : MonoBehaviour
 {
     public GameObject itemSlotPrefab;
+    public List<GameObject> itemList;
+
+    public delegate void onUpdateInventory();
+    public event onUpdateInventory onUpdateInventoryEvent;
 
     private void Start()
     {
@@ -17,6 +21,7 @@ public class InventoryUI : MonoBehaviour
         {
             Destroy(t.transform.gameObject);
         }
+        itemList.Clear();
         DrawnInvenotry();
     }
 
@@ -26,6 +31,7 @@ public class InventoryUI : MonoBehaviour
         {
             AddInventorySlot(item);
         }
+        onUpdateInventoryEvent.Invoke();
     }
 
     public void AddInventorySlot(InventoryItem item)
@@ -33,6 +39,8 @@ public class InventoryUI : MonoBehaviour
         Debug.Log("Print inventory");
         GameObject obj = Instantiate(itemSlotPrefab);
         obj.transform.SetParent(transform, false);
+
+        itemList.Add(obj);
 
         ItemSlot slot = obj.GetComponent<ItemSlot>();
         slot.Set(item);
