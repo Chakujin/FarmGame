@@ -16,7 +16,6 @@ public class Item : MonoBehaviour
         {
             m_data = value;
             image.sprite = m_data.itemImage;
-            myObject = m_data.myObject;
         }
     }
 }

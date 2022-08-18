@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "Item")]
+[CreateAssetMenu(fileName = "Inventory Item Data", menuName = "Item")]
 public class ItemData : ScriptableObject
 {
     //Items Properties
-    public GameObject myObject;
     public Sprite itemImage;
+    public string id;
+    public GameObject itemPref;
 }
