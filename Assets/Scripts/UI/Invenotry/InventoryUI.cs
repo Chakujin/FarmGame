@@ -31,7 +31,10 @@ public class InventoryUI : MonoBehaviour
         {
             AddInventorySlot(item);
         }
-        onUpdateInventoryEvent.Invoke();
+        if (onUpdateInventoryEvent != null)
+        {
+            onUpdateInventoryEvent.Invoke();
+        }
     }
 
     public void AddInventorySlot(InventoryItem item)

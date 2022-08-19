@@ -27,10 +27,10 @@ public class PlayerMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown("Fire1"))
-        //{
-        //    ChangeState(PlayerActionState);
-        //}
+        if (Input.GetMouseButtonDown(0))
+        {
+            ChangeState(PlayerActionState);
+        }
     }
 
     public void ChangeState(MonoBehaviour newState)

@@ -52,7 +52,6 @@ public class InventoryScript : MonoBehaviour
                 _itemDictionary.Remove(itemData);
             }
         }
-
         onInvenotryChangedEventCallback.Invoke(); //UPDATE UI INVENTORY
     }
 }

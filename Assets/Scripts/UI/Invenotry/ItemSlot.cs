@@ -16,9 +16,12 @@ public class ItemSlot : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _stackNumber;
 
+    public string nameId;
+
     public void Set(InventoryItem item)
     {
         _itemIcon.sprite = item.data.itemImage;
+        nameId = item.data.id;
 
         if(item.stackSize <= 1)
         {

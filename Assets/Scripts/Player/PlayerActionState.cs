@@ -15,11 +15,18 @@ public class PlayerActionState : MonoBehaviour
     {
         StateMachine = GetComponent<PlayerMachine>();
         playerMoveState = GetComponent<PlayerMoveState>();
+
+        ItemSelected.onCallNameItemSelectedCall += ActionsItems;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void ActionsItems(string name)
+    {
+        Debug.Log(name);
     }
 }
