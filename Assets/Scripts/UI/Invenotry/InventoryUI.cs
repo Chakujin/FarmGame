@@ -22,10 +22,10 @@ public class InventoryUI : MonoBehaviour
             Destroy(t.transform.gameObject);
         }
         itemList.Clear();
-        DrawnInvenotry();
+        DrawnInventory();
     }
 
-    public void DrawnInvenotry()
+    public void DrawnInventory()
     {
         foreach( InventoryItem item in InventoryScript.Instance.inventory)
         {

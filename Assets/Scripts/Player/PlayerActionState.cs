@@ -8,25 +8,48 @@ public class PlayerActionState : MonoBehaviour
 
     //State Machine
     private PlayerMachine StateMachine;
-    private PlayerMoveState playerMoveState;
+
+    //Herramientas script
+    private string _lastItemName;
+
+    [SerializeField]
+    private ItemData _axeData;
+    
+    [SerializeField]
+    private ItemData _sprinklerData;
+    
+    [SerializeField]
+    private ItemData _hoeData;
 
     // Start is called before the first frame update
     void Start()
     {
         StateMachine = GetComponent<PlayerMachine>();
-        playerMoveState = GetComponent<PlayerMoveState>();
 
         ItemSelected.onCallNameItemSelectedCall += ActionsItems;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        //Axe action
+        if(_lastItemName == _axeData.id)
+        {
+
+        }
+        //Sprinkler action
+        if (_lastItemName == _sprinklerData.id)
+        {
+
+        }
+        //Hoe action
+        if (_lastItemName == _hoeData.id)
+        {
+
+        }
     }
 
     public void ActionsItems(string name)
     {
-        Debug.Log(name);
+        _lastItemName = name;
     }
 }

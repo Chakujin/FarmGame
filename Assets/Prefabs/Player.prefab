@@ -150,6 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd6abad74a0a0248b409f1747815873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _axeData: {fileID: 11400000, guid: fb4d056284744a34e968d27ee34acc74, type: 2}
+  _sprinklerData: {fileID: 11400000, guid: 81965a75b5878dc4e878f151aa7d781a, type: 2}
+  _hoeData: {fileID: 11400000, guid: e17e70c63005f6e46bf12b26a0eeacee, type: 2}
 --- !u!114 &7371685744053346458
 MonoBehaviour:
   m_ObjectHideFlags: 0
