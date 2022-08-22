@@ -69,6 +69,7 @@ public class ItemSelected : MonoBehaviour
 
             GameObject obj = Instantiate(selection);
             obj.transform.SetParent(ObjectSelectedObj.transform, false);
+            obj.transform.SetSiblingIndex(0);
 
             _lastSelected = obj;
 

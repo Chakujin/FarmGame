@@ -111,6 +111,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8656998038736057964}
+  - component: {fileID: 2150823503338880983}
+  - component: {fileID: 4538442085928182238}
+  - component: {fileID: 6517991816253144603}
   - component: {fileID: 4535780839749870121}
   - component: {fileID: 7371685744053346458}
   - component: {fileID: 9221009039325571566}
@@ -138,6 +141,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2150823503338880983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8547320257034411280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18496ad7c3e0bf4a90e2173b1c08050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4538442085928182238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8547320257034411280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca3816f408a6f749a6f5bcbfd67ef7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6517991816253144603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8547320257034411280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b795482db78f9ed42b51aa4f7e65e78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4535780839749870121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +222,15 @@ MonoBehaviour:
   PlayerInicialState: {fileID: 7371685744053346458}
   PlayerMoveState: {fileID: 7371685744053346458}
   PlayerActionState: {fileID: 4535780839749870121}
+  PlayerActionHoe: {fileID: 4538442085928182238}
+  PublicActionAxe: {fileID: 2150823503338880983}
+  PublicActionSprinkler: {fileID: 6517991816253144603}
+  _stateList:
+  - {fileID: 2150823503338880983}
+  - {fileID: 4538442085928182238}
+  - {fileID: 6517991816253144603}
+  - {fileID: 4535780839749870121}
+  - {fileID: 7371685744053346458}
   playerAnimator: {fileID: 708082104977576427}
 --- !u!50 &708082104977576428
 Rigidbody2D:

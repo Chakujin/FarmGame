@@ -10,6 +10,12 @@ public class PlayerMachine : MonoBehaviour
     public MonoBehaviour PlayerInicialState;
     public MonoBehaviour PlayerMoveState;
     public MonoBehaviour PlayerActionState;
+    public MonoBehaviour PlayerActionHoe;
+    public MonoBehaviour PublicActionAxe;
+    public MonoBehaviour PublicActionSprinkler;
+
+    [SerializeField]
+    private List<MonoBehaviour> _stateList;
 
     //Variables
     public Animator playerAnimator;
@@ -19,8 +25,11 @@ public class PlayerMachine : MonoBehaviour
     void Start()
     {
         //State Machine
-        PlayerMoveState.enabled = false;
-        PlayerActionState.enabled = false;
+        foreach(MonoBehaviour script in _stateList)
+        {
+            script.enabled = false;
+        }
+
         ChangeState(PlayerInicialState);
     }
 

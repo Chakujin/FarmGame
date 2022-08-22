@@ -9,6 +9,7 @@ public class PlayerActionState : MonoBehaviour
     //State Machine
     private PlayerMachine StateMachine;
 
+    #region DATA_TOOLS
     //Herramientas script
     private string _lastItemName;
 
@@ -20,6 +21,7 @@ public class PlayerActionState : MonoBehaviour
     
     [SerializeField]
     private ItemData _hoeData;
+    #endregion
 
     // Start is called before the first frame update
     void Start()
@@ -29,22 +31,27 @@ public class PlayerActionState : MonoBehaviour
         ItemSelected.onCallNameItemSelectedCall += ActionsItems;
     }
 
-    private void OnEnable()
+    private void Update()
     {
+        //COMO OPTIMIZO ESTE IF SI EL SWITCH NO ME VA?
         //Axe action
         if(_lastItemName == _axeData.id)
         {
-
+            StateMachine.ChangeState(StateMachine.PublicActionAxe);
         }
         //Sprinkler action
-        if (_lastItemName == _sprinklerData.id)
+        else if (_lastItemName == _sprinklerData.id)
         {
-
+            StateMachine.ChangeState(StateMachine.PublicActionSprinkler);
         }
         //Hoe action
-        if (_lastItemName == _hoeData.id)
+        else if (_lastItemName == _hoeData.id)
         {
-
+            StateMachine.ChangeState(StateMachine.PlayerActionHoe);
+        }
+        else
+        {
+            StateMachine.ChangeState(StateMachine.PlayerMoveState);
         }
     }
 
