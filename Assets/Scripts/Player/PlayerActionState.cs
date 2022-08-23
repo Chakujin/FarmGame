@@ -27,7 +27,10 @@ public class PlayerActionState : MonoBehaviour
     void Start()
     {
         StateMachine = GetComponent<PlayerMachine>();
+    }
 
+    private void OnEnable()
+    {
         ItemSelected.onCallNameItemSelectedCall += ActionsItems;
     }
 
@@ -37,6 +40,7 @@ public class PlayerActionState : MonoBehaviour
         //Axe action
         if(_lastItemName == _axeData.id)
         {
+            StateMachine.playerAnimator.SetTrigger("ActionAxe");
             StateMachine.ChangeState(StateMachine.PublicActionAxe);
         }
         //Sprinkler action

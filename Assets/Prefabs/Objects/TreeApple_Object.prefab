@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3284417285874202401}
   - component: {fileID: 1793343121275739970}
   - component: {fileID: 3368971793466647762}
-  - component: {fileID: 2490714058081100063}
+  - component: {fileID: 848364680678460574}
   m_Layer: 6
   m_Name: TreeApple_Object
   m_TagString: Untagged
@@ -152,7 +152,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2490714058081100063
+--- !u!114 &848364680678460574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,6 +161,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3837070457613415570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21f620a54635e3045b315b7b11ba3505, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bb91eeb416e42f46a2a210f32e833fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
