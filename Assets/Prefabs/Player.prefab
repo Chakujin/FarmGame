@@ -242,6 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   rb: {fileID: 708082104977576428}
+  boxPoint: {fileID: 4151885202347090787}
   m_Movement: {x: 0, y: 0}
 --- !u!114 &9221009039325571566
 MonoBehaviour:

@@ -12,6 +12,7 @@ public class PlayerMoveState : MonoBehaviour
     //Variables
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
+    public Transform boxPoint;
 
     [SerializeField]private Vector2 m_Movement;
 
@@ -34,5 +35,7 @@ public class PlayerMoveState : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + m_Movement * moveSpeed * Time.fixedDeltaTime);
+
+        boxPoint.localPosition = new Vector2(m_Movement.x, m_Movement.y);
     }
 }

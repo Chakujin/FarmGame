@@ -24,5 +24,6 @@ public class AppleTreeAction : MonoBehaviour, IObjectInteractable
             Instantiate(appleObject, appleSpawn);
             _Droped = true;
         }
+        //Añadir para poder talar?
     }
 }
