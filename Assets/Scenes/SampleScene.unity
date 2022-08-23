@@ -65075,10 +65075,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2150823503338880983, guid: 9ca83a9a7263cbf46bd1ec85b2f2bf5a, type: 3}
-      propertyPath: interactableAxeLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 8547320257034411280, guid: 9ca83a9a7263cbf46bd1ec85b2f2bf5a, type: 3}
       propertyPath: m_Name
       value: Player
