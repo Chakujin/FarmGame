@@ -51,8 +51,10 @@ public class PlayerActionState : MonoBehaviour
         //Hoe action
         else if (_lastItemName == _hoeData.id)
         {
+            StateMachine.playerAnimator.SetTrigger("ActionHoe");
             StateMachine.ChangeState(StateMachine.PlayerActionHoe);
         }
+        //NO ACTIONS
         else
         {
             StateMachine.ChangeState(StateMachine.PlayerMoveState);

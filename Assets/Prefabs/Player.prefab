@@ -201,6 +201,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca3816f408a6f749a6f5bcbfd67ef7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitTransform: {fileID: 4151885202347090787}
+  mapTrigger: {fileID: 0}
+  terrainMap: {fileID: 0}
+  textureNewTerrain: {fileID: 11400000, guid: 47ddf3afb05d9e64d86a0e0b027d4cf6, type: 2}
 --- !u!114 &6517991816253144603
 MonoBehaviour:
   m_ObjectHideFlags: 0
