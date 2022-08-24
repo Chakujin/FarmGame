@@ -1,19 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class PlayerActionHoeState : MonoBehaviour
+public class PlayerPlantAction : MonoBehaviour
 {
+    //SCRIPT TO PLANT SEEDS
+
     //State Machine
     private PlayerMachine StateMachine;
 
     //Variables
+    public Tilemap sandMap;
     public Transform hitTransform;
 
-    public Tilemap mapTrigger;
-    public Tilemap terrainMap;
-    public TileBase textureNewTerrain;
-
-    private Vector3Int _gridPos;
+    public GameObject _plantObject;
+    private Vector3Int _cordenades;
     private bool _firtsTime = true;
 
     // Start is called before the first frame update
@@ -24,10 +26,9 @@ public class PlayerActionHoeState : MonoBehaviour
 
     private void OnEnable()
     {
-        if(_firtsTime == false)
+        if( _firtsTime == false)
         {
-            _gridPos = terrainMap.WorldToCell(hitTransform.position);
-            PlaceTile();
+            PlantAction();
         }
         else
         {
@@ -35,11 +36,17 @@ public class PlayerActionHoeState : MonoBehaviour
         }
     }
 
-    private void PlaceTile()
+    private void PlantAction()
     {
-        if (terrainMap.GetTile(_gridPos) != null) // If have terrain can action
+        _cordenades = sandMap.WorldToCell(hitTransform.position);
+
+
+        if (sandMap.GetTile(_cordenades) != null) // If have terrain can action
         {
-            mapTrigger.SetTile(_gridPos, textureNewTerrain); // Print terrain to put seeds
+            Vector3 posIns = sandMap.GetCellCenterLocal(_cordenades); //Get center cell
+
+            //Add plant
+            Instantiate(_plantObject, posIns, transform.localRotation);
             StateMachine.ChangeState(StateMachine.PlayerMoveState);
         }
         else // else do nothing

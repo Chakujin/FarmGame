@@ -10,9 +10,12 @@ public class PlayerMachine : MonoBehaviour
     public MonoBehaviour PlayerInicialState;
     public MonoBehaviour PlayerMoveState;
     public MonoBehaviour PlayerActionState;
+
+    //ACTIONS
     public MonoBehaviour PlayerActionHoe;
     public MonoBehaviour PublicActionAxe;
     public MonoBehaviour PublicActionSprinkler;
+    public MonoBehaviour PlayerActionPlant;
 
     [SerializeField]
     private List<MonoBehaviour> _stateList;

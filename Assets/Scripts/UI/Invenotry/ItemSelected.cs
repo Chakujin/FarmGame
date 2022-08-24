@@ -11,7 +11,7 @@ public class ItemSelected : MonoBehaviour
     private GameObject _lastSelected;
 
     //Event deleagte
-    public  delegate void onCallNameItemSelected(string name);
+    public  delegate void onCallNameItemSelected(string name, bool seed);
     public static event onCallNameItemSelected onCallNameItemSelectedCall;
 
     // Start is called before the first frame update
@@ -23,6 +23,7 @@ public class ItemSelected : MonoBehaviour
 
     private void Update()
     {
+        //INPUTS
         if (Input.GetAxis("Mouse ScrollWheel") > 0f) // Add num
         {
             if (_itemSelected < _inventoryUI.itemList.Count - 1 && _itemSelected >= 0)
@@ -75,7 +76,7 @@ public class ItemSelected : MonoBehaviour
 
             if(onCallNameItemSelectedCall != null)
             {
-                onCallNameItemSelectedCall.Invoke(ObjectSelectedObj.nameId); //Event
+                onCallNameItemSelectedCall.Invoke(ObjectSelectedObj.nameId, ObjectSelectedObj.isSeed); //Event
             }
         }
     }

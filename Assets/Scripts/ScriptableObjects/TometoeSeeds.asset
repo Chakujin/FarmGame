@@ -15,3 +15,4 @@ MonoBehaviour:
   itemImage: {fileID: -386788524301670192, guid: ee9e42dfe4412384fb5ec4ab00310585, type: 3}
   id: itemInventory_TomatoeSeeds
   itemPref: {fileID: 0}
+  seeds: 1

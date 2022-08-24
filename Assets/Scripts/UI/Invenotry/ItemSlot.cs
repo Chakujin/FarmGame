@@ -17,11 +17,13 @@ public class ItemSlot : MonoBehaviour
     private TextMeshProUGUI _stackNumber;
 
     public string nameId;
+    public bool isSeed;
 
     public void Set(InventoryItem item)
     {
         _itemIcon.sprite = item.data.itemImage;
         nameId = item.data.id;
+        isSeed = item.data.seeds;
 
         if(item.stackSize <= 1)
         {

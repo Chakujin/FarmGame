@@ -12,6 +12,7 @@ public class PlayerActionState : MonoBehaviour
     #region DATA_TOOLS
     //Herramientas script
     private string _lastItemName;
+    private bool _lastSeed;
 
     [SerializeField]
     private ItemData _axeData;
@@ -21,6 +22,16 @@ public class PlayerActionState : MonoBehaviour
     
     [SerializeField]
     private ItemData _hoeData;
+    #endregion
+
+    #region DATA_SEEDS
+
+    [SerializeField]
+    private ItemData _tomatoeSeeds;
+
+    [SerializeField]
+    private ItemData _wheatSeeds;
+
     #endregion
 
     // Start is called before the first frame update
@@ -36,33 +47,59 @@ public class PlayerActionState : MonoBehaviour
 
     private void Update()
     {
+        /*
+        switch(_lastItemName)
+        {
+            case _axeData.id:      
+                break;
+        }
+        */
+
         //COMO OPTIMIZO ESTE IF SI EL SWITCH NO ME VA?
-        //Axe action
-        if(_lastItemName == _axeData.id)
+        
+        if(_lastSeed == false)
         {
-            StateMachine.playerAnimator.SetTrigger("ActionAxe");
-            StateMachine.ChangeState(StateMachine.PublicActionAxe);
+            if (_lastItemName == _axeData.id)
+            {
+                StateMachine.playerAnimator.SetTrigger("ActionAxe");
+                StateMachine.ChangeState(StateMachine.PublicActionAxe);
+            }
+            //Sprinkler action
+            else if (_lastItemName == _sprinklerData.id)
+            {
+                StateMachine.playerAnimator.SetTrigger("ActionSprinkler");
+                StateMachine.ChangeState(StateMachine.PublicActionSprinkler);
+            }
+            //Hoe action
+            else if (_lastItemName == _hoeData.id)
+            {
+                StateMachine.playerAnimator.SetTrigger("ActionHoe");
+                StateMachine.ChangeState(StateMachine.PlayerActionHoe);
+            }
+            //NO ACTIONS
+            else
+            {
+                StateMachine.ChangeState(StateMachine.PlayerMoveState);
+            }
         }
-        //Sprinkler action
-        else if (_lastItemName == _sprinklerData.id)
+        
+        //If seeds selected
+        else if (_lastSeed == true)
         {
-            StateMachine.ChangeState(StateMachine.PublicActionSprinkler);
-        }
-        //Hoe action
-        else if (_lastItemName == _hoeData.id)
-        {
-            StateMachine.playerAnimator.SetTrigger("ActionHoe");
-            StateMachine.ChangeState(StateMachine.PlayerActionHoe);
-        }
-        //NO ACTIONS
-        else
-        {
-            StateMachine.ChangeState(StateMachine.PlayerMoveState);
+            if(_lastItemName == _tomatoeSeeds.id)
+            {
+                StateMachine.ChangeState(StateMachine.PlayerActionPlant);
+            }
+            if (_lastItemName == _wheatSeeds.id)
+            {
+                //accion plantar
+            }
         }
     }
 
-    public void ActionsItems(string name)
+    public void ActionsItems(string name , bool seed)
     {
         _lastItemName = name;
+        _lastSeed = seed;
     }
 }

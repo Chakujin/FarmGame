@@ -7,4 +7,5 @@ public class ItemData : ScriptableObject
     public Sprite itemImage;
     public string id;
     public GameObject itemPref;
+    public bool seeds = false;
 }

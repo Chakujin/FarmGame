@@ -141,6 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8656998038736057964}
+  - component: {fileID: 1994700049054895949}
   - component: {fileID: 2150823503338880983}
   - component: {fileID: 4538442085928182238}
   - component: {fileID: 6517991816253144603}
@@ -172,6 +173,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1994700049054895949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8547320257034411280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02371ee1d518294fb28c522a4d0da36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sandMap: {fileID: 0}
+  hitTransform: {fileID: 4151885202347090787}
 --- !u!114 &2150823503338880983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b795482db78f9ed42b51aa4f7e65e78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  terrainMap: {fileID: 0}
 --- !u!114 &4535780839749870121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +248,8 @@ MonoBehaviour:
   _axeData: {fileID: 11400000, guid: fb4d056284744a34e968d27ee34acc74, type: 2}
   _sprinklerData: {fileID: 11400000, guid: 81965a75b5878dc4e878f151aa7d781a, type: 2}
   _hoeData: {fileID: 11400000, guid: e17e70c63005f6e46bf12b26a0eeacee, type: 2}
+  _tomatoeSeeds: {fileID: 11400000, guid: ebf34d75a58a11540b3e8f3e882f1e60, type: 2}
+  _wheatSeeds: {fileID: 11400000, guid: 6e1389516db5d434eacfd9deaefae425, type: 2}
 --- !u!114 &7371685744053346458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,12 +284,14 @@ MonoBehaviour:
   PlayerActionHoe: {fileID: 4538442085928182238}
   PublicActionAxe: {fileID: 2150823503338880983}
   PublicActionSprinkler: {fileID: 6517991816253144603}
+  PlayerActionPlant: {fileID: 1994700049054895949}
   _stateList:
   - {fileID: 2150823503338880983}
   - {fileID: 4538442085928182238}
   - {fileID: 6517991816253144603}
   - {fileID: 4535780839749870121}
   - {fileID: 7371685744053346458}
+  - {fileID: 1994700049054895949}
   playerAnimator: {fileID: 708082104977576427}
 --- !u!50 &708082104977576428
 Rigidbody2D:
