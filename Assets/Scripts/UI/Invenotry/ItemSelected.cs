@@ -8,7 +8,7 @@ public class ItemSelected : MonoBehaviour
     [SerializeField]private int _itemSelected = 0;
     public static ItemSlot ObjectSelectedObj; // Take 
     private InventoryUI _inventoryUI;
-    private GameObject _lastSelected;
+    private GameObject _lastSelectedBackground;
 
     //Event deleagte
     public  delegate void onCallNameItemSelected(string name, bool seed);
@@ -65,14 +65,19 @@ public class ItemSelected : MonoBehaviour
     {
         if (_inventoryUI.itemList.Count >=1)
         {
-            Destroy(_lastSelected);
+            while (_itemSelected >= _inventoryUI.itemList.Count) // If Length itemList is bigger or equal than my int lenth select item -- length select item
+            {
+                _itemSelected--;
+            }
+
+            Destroy(_lastSelectedBackground);
             ObjectSelectedObj = _inventoryUI.itemList[_itemSelected].GetComponent<ItemSlot>();
 
             GameObject obj = Instantiate(selection);
             obj.transform.SetParent(ObjectSelectedObj.transform, false);
             obj.transform.SetSiblingIndex(0);
 
-            _lastSelected = obj;
+            _lastSelectedBackground = obj;
 
             if(onCallNameItemSelectedCall != null)
             {

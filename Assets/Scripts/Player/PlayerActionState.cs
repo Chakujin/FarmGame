@@ -97,7 +97,8 @@ public class PlayerActionState : MonoBehaviour
             }
             if (_lastItemName == _wheatSeeds.id)
             {
-                //accion plantar
+                onCallSeedSelectedCallBack.Invoke(_wheatSeeds);
+                StateMachine.ChangeState(StateMachine.PlayerActionPlant);
             }
         }
     }

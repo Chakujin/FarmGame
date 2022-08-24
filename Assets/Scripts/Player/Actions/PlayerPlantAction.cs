@@ -62,7 +62,7 @@ public class PlayerPlantAction : MonoBehaviour
         }
     }
 
-    private void LastSeedSelected(ItemData data)
+    private void LastSeedSelected(ItemData data) //Update seed data selected
     {
         _lastItem = data;
     }

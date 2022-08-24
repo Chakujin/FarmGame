@@ -21,8 +21,8 @@ public class InventoryUI : MonoBehaviour
         {
             Destroy(t.transform.gameObject);
         }
-        itemList.Clear();
-        DrawnInventory();
+        itemList.Clear(); // Clear List items
+        DrawnInventory(); // Create new list
     }
 
     public void DrawnInventory()
