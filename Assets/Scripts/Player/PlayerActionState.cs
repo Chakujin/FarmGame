@@ -9,6 +9,10 @@ public class PlayerActionState : MonoBehaviour
     //State Machine
     private PlayerMachine StateMachine;
 
+    //Events
+    public delegate void onCallSeedSelected(ItemData data);
+    public static event onCallSeedSelected onCallSeedSelectedCallBack; // Send type of seeds to PlayerPlantAction
+
     #region DATA_TOOLS
     //Herramientas script
     private string _lastItemName;
@@ -88,6 +92,7 @@ public class PlayerActionState : MonoBehaviour
         {
             if(_lastItemName == _tomatoeSeeds.id)
             {
+                onCallSeedSelectedCallBack.Invoke(_tomatoeSeeds);
                 StateMachine.ChangeState(StateMachine.PlayerActionPlant);
             }
             if (_lastItemName == _wheatSeeds.id)

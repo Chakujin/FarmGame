@@ -18,12 +18,14 @@ public class ItemSlot : MonoBehaviour
 
     public string nameId;
     public bool isSeed;
+    public ItemData itemDataSlot;
 
     public void Set(InventoryItem item)
     {
         _itemIcon.sprite = item.data.itemImage;
         nameId = item.data.id;
         isSeed = item.data.seeds;
+        itemDataSlot = item.data;
 
         if(item.stackSize <= 1)
         {

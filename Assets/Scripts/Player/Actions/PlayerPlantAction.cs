@@ -18,10 +18,13 @@ public class PlayerPlantAction : MonoBehaviour
     private Vector3Int _cordenades;
     private bool _firtsTime = true;
 
+    private ItemData _lastItem;
+
     // Start is called before the first frame update
     void Awake()
     {
         StateMachine = GetComponent<PlayerMachine>();
+        PlayerActionState.onCallSeedSelectedCallBack += LastSeedSelected;
     }
 
     private void OnEnable()
@@ -43,6 +46,10 @@ public class PlayerPlantAction : MonoBehaviour
 
         if (sandMap.GetTile(_cordenades) != null) // If have terrain can action
         {
+            //Remove stack
+            InventoryScript.Instance.Remove(_lastItem);
+            
+            //Find pos
             Vector3 posIns = sandMap.GetCellCenterLocal(_cordenades); //Get center cell
 
             //Add plant
@@ -53,5 +60,10 @@ public class PlayerPlantAction : MonoBehaviour
         {
             StateMachine.ChangeState(StateMachine.PlayerMoveState);
         }
+    }
+
+    private void LastSeedSelected(ItemData data)
+    {
+        _lastItem = data;
     }
 }

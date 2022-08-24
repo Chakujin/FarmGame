@@ -12,7 +12,7 @@ public class ItemSelected : MonoBehaviour
 
     //Event deleagte
     public  delegate void onCallNameItemSelected(string name, bool seed);
-    public static event onCallNameItemSelected onCallNameItemSelectedCall;
+    public static event onCallNameItemSelected onCallNameItemSelectedCall; //seend information to PlayerAction for current item selected
 
     // Start is called before the first frame update
     void Start()
