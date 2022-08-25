@@ -4,11 +4,5 @@ using UnityEngine;
 
 public class PlantedListScript : MonoBehaviour
 {
-    public static List<Vector3Int> PlantedPositions;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static List<Vector3Int> PlantedPositions = new List<Vector3Int> ();
 }
