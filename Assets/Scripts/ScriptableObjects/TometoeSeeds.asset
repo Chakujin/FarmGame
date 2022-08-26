@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: -386788524301670192, guid: ee9e42dfe4412384fb5ec4ab00310585, type: 3}
   id: itemInventory_TomatoeSeeds
-  itemPref: {fileID: 0}
+  itemPref: {fileID: 8457742363620042251, guid: 83a1d942456dde04fa4367d12a2f0556, type: 3}
   seeds: 1
