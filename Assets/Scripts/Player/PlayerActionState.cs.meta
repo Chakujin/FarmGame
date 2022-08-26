@@ -3,7 +3,12 @@ guid: 8bd6abad74a0a0248b409f1747815873
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _axeData: {fileID: 11400000, guid: fb4d056284744a34e968d27ee34acc74, type: 2}
+  - _sprinklerData: {fileID: 11400000, guid: 81965a75b5878dc4e878f151aa7d781a, type: 2}
+  - _hoeData: {fileID: 11400000, guid: e17e70c63005f6e46bf12b26a0eeacee, type: 2}
+  - _tomatoeSeeds: {fileID: 11400000, guid: ebf34d75a58a11540b3e8f3e882f1e60, type: 2}
+  - _wheatSeeds: {fileID: 11400000, guid: 6e1389516db5d434eacfd9deaefae425, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

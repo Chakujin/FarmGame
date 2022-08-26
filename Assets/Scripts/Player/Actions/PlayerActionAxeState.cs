@@ -26,8 +26,8 @@ public class PlayerActionAxeState : MonoBehaviour
 
         foreach (Collider2D obj in detectObject)
         {
-            IObjectInteractable _interactable = obj.GetComponent<IObjectInteractable>();
-            if(_interactable != null)
+            IObjectInteractable _interactable = obj.GetComponent<IObjectInteractable>(); //Get the interface
+            if(_interactable != null) //if the interface is not empty
             {
                 HitObject(_interactable);
             }

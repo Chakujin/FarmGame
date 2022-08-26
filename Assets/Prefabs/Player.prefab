@@ -187,7 +187,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sandMap: {fileID: 0}
   hitTransform: {fileID: 4151885202347090787}
-  _plantObject: {fileID: 8457742363620042251, guid: 4dbcb03c1edbeca48a6abbc3257b2d05, type: 3}
 --- !u!114 &2150823503338880983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +232,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b795482db78f9ed42b51aa4f7e65e78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainMap: {fileID: 0}
+  hitTransform: {fileID: 4151885202347090787}
+  sizeCube: {x: 1, y: 1}
+  plantLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &4535780839749870121
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,13 +5,14 @@ using UnityEngine.Tilemaps;
 
 public class PlayerActionSprinklerState : MonoBehaviour
 {
+    //ONLY ACTION PUT WATER
     //State Machine
     private PlayerMachine StateMachine;
 
     //Variables
-    public Tilemap terrainMap;
-    private Vector3Int _cordenatesTile;
-
+    public Transform hitTransform;
+    public Vector2 sizeCube;
+    public LayerMask plantLayer;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +20,14 @@ public class PlayerActionSprinklerState : MonoBehaviour
         StateMachine = GetComponent<PlayerMachine>();
     }
 
-    private void PutWater()
+    private void FixedUpdate()
     {
-        
+        Collider2D[] detectObject = Physics2D.OverlapBoxAll(hitTransform.position, sizeCube, 0, plantLayer);
+
+        foreach(Collider2D plant in detectObject)
+        {
+            plant.GetComponent<Plants>().OnPlantInteract();
+        }
+        StateMachine.ChangeState(StateMachine.PlayerMoveState);
     }
 }

@@ -39,7 +39,7 @@ public class InventoryUI : MonoBehaviour
 
     public void AddInventorySlot(InventoryItem item)
     {
-        Debug.Log("Print inventory");
+        //Debug.Log("Print inventory");
         GameObject obj = Instantiate(itemSlotPrefab);
         obj.transform.SetParent(transform, false);
 

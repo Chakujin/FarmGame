@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8457742363620042252}
   - component: {fileID: 9055431497687189741}
   m_Layer: 0
-  m_Name: Sprinkler_ItemDrop
+  m_Name: Tomatoe_ItemDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 3435190667326688956, guid: dc4cd1e5022e64648994cdabb54beb0a, type: 3}
+  m_Sprite: {fileID: 5822373649741285269, guid: ee9e42dfe4412384fb5ec4ab00310585, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016fc2f921aa50a4686897e85a45d1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 4b1615e53533d4743ad77019ceccf908, type: 2}
+  data: {fileID: 11400000, guid: e657f01e524029340b5ac449b2f32ac5, type: 2}
 --- !u!50 &8457742363620042252
 Rigidbody2D:
   serializedVersion: 4
@@ -143,5 +143,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.8}
+  m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
