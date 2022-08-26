@@ -7,6 +7,7 @@ public class Plants : MonoBehaviour
     public Sprite[] plantIncrease;
     public SpriteRenderer myRenderer;
     public GameObject Fruit;
+    public GameObject waterDrop;
 
     [SerializeField]private float f_currenTime;
     public float growUp;
@@ -27,6 +28,7 @@ public class Plants : MonoBehaviour
 
             if (growUp <= f_currenTime)
             {
+                waterDrop.SetActive(true);
                 b_growUpPlant = false;
             }
         }
@@ -53,7 +55,7 @@ public class Plants : MonoBehaviour
                 // enable continue growUp
                 b_growUpPlant = true;
                 f_currenTime = 0f;
-
+                waterDrop.SetActive(false);
 
             }
         }
