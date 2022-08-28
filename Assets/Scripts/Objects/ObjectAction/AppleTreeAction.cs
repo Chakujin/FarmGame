@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AppleTreeAction : MonoBehaviour, IObjectInteractable
@@ -24,6 +22,6 @@ public class AppleTreeAction : MonoBehaviour, IObjectInteractable
             Instantiate(appleObject, appleSpawn);
             _Droped = true;
         }
-        //Añadir para poder talar?
+        //Anadir para poder talar?
     }
 }
