@@ -12,9 +12,6 @@ public class PlayerActionState : MonoBehaviour
     public static event onCallSeedSelected onCallSeedSelectedCallBack; // Send type of seeds to PlayerPlantAction
 
     #region DATA_TOOLS
-    //Herramientas script
-    private string _lastItemName;
-    private bool _lastSeed;
 
     [SerializeField]
     private ItemData _axeData;
@@ -26,15 +23,7 @@ public class PlayerActionState : MonoBehaviour
     private ItemData _hoeData;
     #endregion
 
-    #region DATA_SEEDS
-
-    [SerializeField]
-    private ItemData _tomatoeSeeds;
-
-    [SerializeField]
-    private ItemData _wheatSeeds;
-
-    #endregion
+    private ItemData lastItem;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +39,7 @@ public class PlayerActionState : MonoBehaviour
     private void Update()
     {
         /*
-        switch(_lastItemName)
+        switch(lastItem.id)
         {
             case _axeData.id:      
                 break;
@@ -59,21 +48,21 @@ public class PlayerActionState : MonoBehaviour
 
         //COMO OPTIMIZO ESTE IF SI EL SWITCH NO ME VA?
         
-        if(_lastSeed == false)
+        if(lastItem.seeds == false)
         {
-            if (_lastItemName == _axeData.id)
+            if (lastItem.id == _axeData.id)
             {
                 StateMachine.playerAnimator.SetTrigger("ActionAxe");
                 StateMachine.ChangeState(StateMachine.PublicActionAxe);
             }
             //Sprinkler action
-            else if (_lastItemName == _sprinklerData.id)
+            else if (lastItem.id == _sprinklerData.id)
             {
                 StateMachine.playerAnimator.SetTrigger("ActionSprinkler");
                 StateMachine.ChangeState(StateMachine.PublicActionSprinkler);
             }
             //Hoe action
-            else if (_lastItemName == _hoeData.id)
+            else if (lastItem.id == _hoeData.id)
             {
                 StateMachine.playerAnimator.SetTrigger("ActionHoe");
                 StateMachine.ChangeState(StateMachine.PlayerActionHoe);
@@ -86,24 +75,16 @@ public class PlayerActionState : MonoBehaviour
         }
         
         //If seeds selected
-        else if (_lastSeed == true)
+        else if (lastItem.seeds == true)
         {
-            if(_lastItemName == _tomatoeSeeds.id)
-            {
-                onCallSeedSelectedCallBack.Invoke(_tomatoeSeeds);
-                StateMachine.ChangeState(StateMachine.PlayerActionPlant);
-            }
-            if (_lastItemName == _wheatSeeds.id)
-            {
-                onCallSeedSelectedCallBack.Invoke(_wheatSeeds);
-                StateMachine.ChangeState(StateMachine.PlayerActionPlant);
-            }
+
+            onCallSeedSelectedCallBack.Invoke(lastItem);
+            StateMachine.ChangeState(StateMachine.PlayerActionPlant);
         }
     }
 
-    public void ActionsItems(string name , bool seed)
+    public void ActionsItems(ItemData data)
     {
-        _lastItemName = name;
-        _lastSeed = seed;
+        lastItem = data;
     }
 }

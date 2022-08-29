@@ -42,7 +42,7 @@ public class PlayerPlantAction : MonoBehaviour
     {
         _cordenades = sandMap.WorldToCell(hitTransform.position); //Get cordenades from the cell
 
-        //A�ADIR PLANTAR SOLO SI NO SE H APLANTADO YA
+        //ANADIR PLANTAR SOLO SI NO SE H APLANTADO YA
         if (sandMap.GetTile(_cordenades) != null) // If have terrain can action
         {
             //COMPROVE IF THE CELL HAVE PLANT

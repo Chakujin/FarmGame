@@ -9,7 +9,7 @@ public class ItemSelected : MonoBehaviour
     private GameObject _lastSelectedBackground;
 
     //Event deleagte
-    public  delegate void onCallNameItemSelected(string name, bool seed);
+    public  delegate void onCallNameItemSelected(ItemData data);
     public static event onCallNameItemSelected onCallNameItemSelectedCall; //seend information to PlayerAction for current item selected
 
     // Start is called before the first frame update
@@ -70,6 +70,7 @@ public class ItemSelected : MonoBehaviour
 
             Destroy(_lastSelectedBackground);
             ObjectSelectedObj = _inventoryUI.itemList[_itemSelected].GetComponent<ItemSlot>();
+            ItemData SelectedData = ObjectSelectedObj.itemDataSlot;
 
             GameObject obj = Instantiate(selection);
             obj.transform.SetParent(ObjectSelectedObj.transform, false);
@@ -79,7 +80,7 @@ public class ItemSelected : MonoBehaviour
 
             if(onCallNameItemSelectedCall != null)
             {
-                onCallNameItemSelectedCall.Invoke(ObjectSelectedObj.nameId, ObjectSelectedObj.isSeed); //Event
+                onCallNameItemSelectedCall.Invoke(SelectedData); //Event
             }
         }
     }
