@@ -21,7 +21,7 @@ public class PlayerMachine : MonoBehaviour
 
     //Variables
     public Animator playerAnimator;
-
+    private bool _paused = false;
 
     // Start is called before the first frame update
     void Start()
@@ -35,10 +35,19 @@ public class PlayerMachine : MonoBehaviour
         ChangeState(PlayerInicialState);
     }
 
+    private void OnEnable()
+    {
+        PauseScript.onPauseCallBack += IsPaused;
+    }
+    private void OnDisable()
+    {
+        PauseScript.onPauseCallBack -= IsPaused;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && _paused == false)
         {
             ChangeState(PlayerActionState);
         }
@@ -52,5 +61,17 @@ public class PlayerMachine : MonoBehaviour
         }
         PlayerActualState = newState;
         PlayerActualState.enabled = true;
+    }
+
+    private void IsPaused()
+    {
+        if(_paused == false)
+        {
+            _paused = true;
+        }
+        else
+        {
+            _paused = false;
+        }
     }
 }
