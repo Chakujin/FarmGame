@@ -403,7 +403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -7}
+  m_AnchoredPosition: {x: 0, y: 2.4}
   m_SizeDelta: {x: 420, y: 92.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &211897198
@@ -428,8 +428,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: OPTIONS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 58a6ca416ae9c32448ad60da7685d0dc, type: 2}
+  m_sharedMaterial: {fileID: 2716981965965886542, guid: 58a6ca416ae9c32448ad60da7685d0dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -453,8 +453,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 74.5
-  m_fontSizeBase: 74.5
+  m_fontSize: 48.1
+  m_fontSizeBase: 48.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3876,6 +3876,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8631677516065732713, guid: 524a1acd7f49af34bb24bf42d874f826, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631677516065732716, guid: 524a1acd7f49af34bb24bf42d874f826, type: 3}
+      propertyPath: m_PresetInfoIsWorld
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8631677516065732718, guid: 524a1acd7f49af34bb24bf42d874f826, type: 3}
