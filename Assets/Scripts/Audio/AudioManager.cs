@@ -38,15 +38,6 @@ public class AudioManager : MonoBehaviour
             s.source.dopplerLevel = 0.5f;
             s.source.spread = 120f;
             s.source.playOnAwake = s.PlayOnAwake;
-            
-
-            //3D Sound
-            /*
-            s.source.spatialBlend = s.spatialBlend;
-            s.source.rolloffMode = s.rolloffMode;
-            s.source.dopplerLevel = s.dopplerLevel;
-            s.source.maxDistance = s.maxDistance;
-            */
         }
     }
 
@@ -60,12 +51,6 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        /*
-        if (PauseManager.gameispaused)
-        {
-            //s.source.volume *= .5f;
-        }
-        */
         s.source.Play();
     }
 
@@ -78,12 +63,6 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        /*
-        if (PauseManager.gameispaused)
-        {
-            s.source.volume *= .5f;
-        }
-        */
         s.source.pitch = UnityEngine.Random.Range(s.minPitch, s.maxPitch);
         s.source.Play();
     }

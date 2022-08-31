@@ -55,3 +55,58 @@ MonoBehaviour:
     loop: 0
     PlayOnAwake: 0
     source: {fileID: 0}
+  - name: Hoe
+    clip: {fileID: 8300000, guid: 9f942839872815b4b97395f008aeca32, type: 3}
+    audioMixer: {fileID: 24100000, guid: c82088988aa4c784cb3a1dc9e1305cd2, type: 2}
+    minPitch: 1
+    maxPitch: 2
+    volume: 1
+    pitch: 1
+    outputMixer: Master
+    loop: 0
+    PlayOnAwake: 0
+    source: {fileID: 0}
+  - name: Seeds
+    clip: {fileID: 8300000, guid: 6449553510e485442a857824b6042989, type: 3}
+    audioMixer: {fileID: 24100000, guid: c82088988aa4c784cb3a1dc9e1305cd2, type: 2}
+    minPitch: 1
+    maxPitch: 2
+    volume: 1
+    pitch: 1
+    outputMixer: Master
+    loop: 0
+    PlayOnAwake: 0
+    source: {fileID: 0}
+  - name: Sprinkler
+    clip: {fileID: 8300000, guid: 5780fe471990fa144a1309ce9a5e83b7, type: 3}
+    audioMixer: {fileID: 24100000, guid: c82088988aa4c784cb3a1dc9e1305cd2, type: 2}
+    minPitch: 1
+    maxPitch: 2
+    volume: 1
+    pitch: 1
+    outputMixer: Master
+    loop: 0
+    PlayOnAwake: 0
+    source: {fileID: 0}
+  - name: Step
+    clip: {fileID: 8300000, guid: 9092830982c373440988fe3aa868420f, type: 3}
+    audioMixer: {fileID: 24100000, guid: c82088988aa4c784cb3a1dc9e1305cd2, type: 2}
+    minPitch: 1
+    maxPitch: 2
+    volume: 1
+    pitch: 1
+    outputMixer: Master
+    loop: 0
+    PlayOnAwake: 0
+    source: {fileID: 0}
+  - name: TakeItem
+    clip: {fileID: 8300000, guid: 7eaf91830e2f56c44819934210c436fa, type: 3}
+    audioMixer: {fileID: 24100000, guid: c82088988aa4c784cb3a1dc9e1305cd2, type: 2}
+    minPitch: 1
+    maxPitch: 2
+    volume: 1
+    pitch: 1
+    outputMixer: Master
+    loop: 0
+    PlayOnAwake: 0
+    source: {fileID: 0}
