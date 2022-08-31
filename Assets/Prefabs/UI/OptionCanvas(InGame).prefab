@@ -890,7 +890,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1820, y: 980}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &587646364020091238
 Canvas:
@@ -935,7 +935,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &587646364020091236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1869,6 +1869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainVolumeSlider: {fileID: 587646364878489121}
   audioMixer: {fileID: 24100000, guid: c82088988aa4c784cb3a1dc9e1305cd2, type: 2}
+  exposedParametrer: Master
 --- !u!1 &587646364905320975
 GameObject:
   m_ObjectHideFlags: 0

@@ -926,6 +926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainVolumeSlider: {fileID: 8631677515179792170}
   audioMixer: {fileID: 24100000, guid: c82088988aa4c784cb3a1dc9e1305cd2, type: 2}
+  exposedParametrer: Master
 --- !u!1 &8631677515206648580
 GameObject:
   m_ObjectHideFlags: 0
