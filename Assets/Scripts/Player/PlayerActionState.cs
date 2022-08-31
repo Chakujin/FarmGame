@@ -47,39 +47,45 @@ public class PlayerActionState : MonoBehaviour
         */
 
         //COMO OPTIMIZO ESTE IF SI EL SWITCH NO ME VA?
-        
-        if(lastItem.seeds == false)
+        if(lastItem != null)
         {
-            if (lastItem.id == _axeData.id)
+            if (lastItem.seeds == false)
             {
-                StateMachine.playerAnimator.SetTrigger("ActionAxe");
-                StateMachine.ChangeState(StateMachine.PublicActionAxe);
+                if (lastItem.id == _axeData.id)
+                {
+                    StateMachine.playerAnimator.SetTrigger("ActionAxe");
+                    StateMachine.ChangeState(StateMachine.PublicActionAxe);
+                }
+                //Sprinkler action
+                else if (lastItem.id == _sprinklerData.id)
+                {
+                    StateMachine.playerAnimator.SetTrigger("ActionSprinkler");
+                    StateMachine.ChangeState(StateMachine.PublicActionSprinkler);
+                }
+                //Hoe action
+                else if (lastItem.id == _hoeData.id)
+                {
+                    StateMachine.playerAnimator.SetTrigger("ActionHoe");
+                    StateMachine.ChangeState(StateMachine.PlayerActionHoe);
+                }
+                //NO ACTIONS
+                else
+                {
+                    StateMachine.ChangeState(StateMachine.PlayerMoveState);
+                }
             }
-            //Sprinkler action
-            else if (lastItem.id == _sprinklerData.id)
+
+            //If seeds selected
+            else if (lastItem.seeds == true)
             {
-                StateMachine.playerAnimator.SetTrigger("ActionSprinkler");
-                StateMachine.ChangeState(StateMachine.PublicActionSprinkler);
-            }
-            //Hoe action
-            else if (lastItem.id == _hoeData.id)
-            {
-                StateMachine.playerAnimator.SetTrigger("ActionHoe");
-                StateMachine.ChangeState(StateMachine.PlayerActionHoe);
-            }
-            //NO ACTIONS
-            else
-            {
-                StateMachine.ChangeState(StateMachine.PlayerMoveState);
+
+                onCallSeedSelectedCallBack.Invoke(lastItem);
+                StateMachine.ChangeState(StateMachine.PlayerActionPlant);
             }
         }
-        
-        //If seeds selected
-        else if (lastItem.seeds == true)
+        else
         {
-
-            onCallSeedSelectedCallBack.Invoke(lastItem);
-            StateMachine.ChangeState(StateMachine.PlayerActionPlant);
+            StateMachine.ChangeState(StateMachine.PlayerMoveState);
         }
     }
 

@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_Sprite: {fileID: 7595986285605212588, guid: 38f3f402b27e03f47b4f095ee98cf1b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -252,8 +252,6 @@ MonoBehaviour:
   _axeData: {fileID: 11400000, guid: fb4d056284744a34e968d27ee34acc74, type: 2}
   _sprinklerData: {fileID: 11400000, guid: 81965a75b5878dc4e878f151aa7d781a, type: 2}
   _hoeData: {fileID: 11400000, guid: e17e70c63005f6e46bf12b26a0eeacee, type: 2}
-  _tomatoeSeeds: {fileID: 11400000, guid: ebf34d75a58a11540b3e8f3e882f1e60, type: 2}
-  _wheatSeeds: {fileID: 11400000, guid: 6e1389516db5d434eacfd9deaefae425, type: 2}
 --- !u!114 &7371685744053346458
 MonoBehaviour:
   m_ObjectHideFlags: 0

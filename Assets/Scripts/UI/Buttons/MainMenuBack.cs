@@ -7,7 +7,7 @@ public class MainMenuBack : MonoBehaviour
     // Start is called before the first frame update
     public void BackPress()
     {
-        FindObjectOfType<AudioManager>().Play("Button");
+        FindObjectOfType<AudioManager>().PlayRandomPitch("Button");
         OptionsCanvas.SetActive(false);
     }   
 }

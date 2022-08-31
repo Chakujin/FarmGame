@@ -13,7 +13,6 @@ public class SetVolumeScript : MonoBehaviour
     public void SetVolume(float sliderValue)
     {
         audioMixer.SetFloat(exposedParametrer, Mathf.Log10(sliderValue) * 20);
-        FindObjectOfType<AudioManager>().Play("Button");
         if (sliderValue == 0)
         {
             audioMixer.SetFloat(exposedParametrer, -60);
