@@ -40,6 +40,7 @@ public class PlayerActionHoeState : MonoBehaviour
         if (terrainMap.GetTile(_gridPos) != null) // If have terrain can action
         {
             mapTrigger.SetTile(_gridPos, textureNewTerrain); // Print terrain to put seeds
+            FindObjectOfType<AudioManager>().Play("Hoe");
             StateMachine.ChangeState(StateMachine.PlayerMoveState);
         }
         else // else do nothing

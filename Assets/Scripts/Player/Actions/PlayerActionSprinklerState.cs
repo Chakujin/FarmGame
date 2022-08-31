@@ -24,6 +24,7 @@ public class PlayerActionSprinklerState : MonoBehaviour
         foreach(Collider2D plant in detectObject)
         {
             plant.GetComponent<Plants>().OnPlantInteract();
+            FindObjectOfType<AudioManager>().Play("Sprinkler");
         }
         StateMachine.ChangeState(StateMachine.PlayerMoveState);
     }

@@ -36,6 +36,7 @@ public class PlayerActionAxeState : MonoBehaviour
     private void HitObject(IObjectInteractable obj)
     {
         obj.OnInteract();
+        FindObjectOfType<AudioManager>().Play("Axe");
         StateMachine.ChangeState(StateMachine.PlayerMoveState);
     }
 

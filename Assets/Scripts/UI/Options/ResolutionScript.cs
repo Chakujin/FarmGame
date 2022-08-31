@@ -38,7 +38,7 @@ public class ResolutionScript : MonoBehaviour
     //Resolution Voids
     public void SetResolution(int resolutionIndex)
     {
-        //FindObjectOfType<AudioSource>().Play();
+        FindObjectOfType<AudioManager>().Play("Button");
 
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);

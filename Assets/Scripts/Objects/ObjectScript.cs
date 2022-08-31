@@ -9,6 +9,7 @@ public class ObjectScript : MonoBehaviour
 
     public void PickUp()
     {
+        FindObjectOfType<AudioManager>().Play("TakeItem");
         InventoryScript.Instance.Add(data); //Add to invenotry
         Destroy(gameObject);
     }

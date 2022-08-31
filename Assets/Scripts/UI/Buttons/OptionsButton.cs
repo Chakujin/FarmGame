@@ -6,6 +6,7 @@ public class OptionsButton : MonoBehaviour
     //
     public void OnOptions()
     {
+        FindObjectOfType<AudioManager>().Play("Button");
         OptionsCanvas.SetActive(true);
     }
 }

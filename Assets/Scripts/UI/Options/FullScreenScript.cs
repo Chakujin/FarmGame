@@ -11,7 +11,7 @@ public class FullScreenScript : MonoBehaviour
 
     public void SetFullscreen(bool isFullscreen)
     {
-        //FindObjectOfType<AudioSource>().Play();
+        FindObjectOfType<AudioManager>().Play("Button");
         Screen.fullScreen = isFullscreen;
         _Anim.SetBool("Press", isFullscreen);
     }
